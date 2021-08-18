@@ -12,4 +12,9 @@ app.get("/", (req, res) => {
   return res.status(200).json(students);
 });
 
+// Routes
+const studentsRoute = require("./routes/students");
+
+app.use("/students", studentsRoute);
+
 module.exports = app;
